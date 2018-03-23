@@ -1,0 +1,178 @@
+ * {
+   box-sizing: border-box;
+ }
+
+ .body {
+   font-size: 100%;
+   font-family: Arial, Helvetica, Verdana, Geneva;
+   
+ }
+
+.column {
+  width: 33.3%;
+  display: inline-block;
+  margin-right: -4px;
+  padding: 10px;
+  font-size: 1.5rem;
+  vertical-align: top;
+}
+
+.column img {
+  width: 100%;
+}
+
+.container {
+  width: 960px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+    letter-spacing: .3rem;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+h5 {
+  background: #FFD700;
+  font-size: 1.8rem;
+}
+.start-search {
+  display: block;
+  margin: auto;
+  background-color: white;
+  padding: 15px;
+  border: 3px solid black;
+  color: #000000;
+  font-size: 3vw;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer; 
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+}
+.start-search:hover {
+  background-color: #FFD700;
+}
+.search-page {
+    display: none;
+}
+
+.search-page .nav { 
+  text-align: center;
+  background: #FFD700;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 960px;
+  margin: auto;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 1.5rem;
+}
+
+.search-page .nav span {
+ 
+  letter-spacing: .6rem;
+  cursor: pointer;
+  
+
+}
+.search-page .nav a {
+  float:right;
+}
+
+
+
+.search-form input {
+  border: 1px solid #444444;
+  padding: 10px;
+  margin-right: -4px;
+}
+.search-form input[type='text'] {
+  width: 60%;
+}
+
+.search-form input[type='submit'] {
+  width: 20%;
+}
+.search-form input[type='submit']:hover {
+  background-color: #FFD700;
+  
+}
+.search-form input[type='reset'] {
+  width: 20%;
+}
+.search-form input[type='reset']:hover {
+  background-color: #FFD700;
+  
+}
+.search-results {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.search-results li {
+  border-bottom: 1px dashed black;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.search-results li .card-content {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 50px;
+}
+
+.search-results li .card-content .card-title { 
+  margin-top: 0;
+}
+
+.search-results li img {
+  width: 300px;
+  display: inline-block;
+}
+
+.intro-section {
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 25px; 
+}
+
+.alist {
+  list-style-type: disc;
+  padding: 30px;
+  font-size: 140%;
+  font: lucida;
+  border: 1px  solid black;
+  padding-bottom: 5px;
+
+}
+
+.alist li {
+  border-bottom: none;
+}
+
+
+
+.quote {
+  border: 2px solid black;
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  font-size: 2vw;
+}
+.quote p {
+  background: #FFD700;
+}
+.footer {
+  text-align: center;
+}

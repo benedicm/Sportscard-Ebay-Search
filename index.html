@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width" name="viewport">
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<link href="assets/css/float-grid.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+	<title>A card explorer</title>
+</head>
+
+<body>
+	<main role="main">
+		<section role="start page" class="intro-section">
+			<div class="header">
+				<h1>eBay Sportscollector's Card Search</h1>
+				<h5>Discover the real-time market value of your favorite sports trading cards!</h5>
+			</div>
+			<div class="row">
+				<div class="column">
+					<img alt="paytonrecord" src="assets/images/paytonrecord.jpg">
+					<img alt="payton" src="assets/images/paytonrookie.jpg">
+				</div>
+				<div class="column">
+					<img alt="nagurski" src="assets/images/nagurski.jpg">
+					<img alt="namathrecord" src="assets/images/namathrecord.jpg">
+				</div>
+				<div class="column">
+					<img alt="namath" src="assets/images/joenamath.jpg">
+				</div>
+			</div>
+			<Div class="footer">
+				<h5>This app displays Ebay's last final sale price for popular sports cards.</h5>
+			</Div>
+			<button class="start-search">Go to Search</button>
+		</section>
+		<div class="search-page">
+			<nav class="nav" role="navigation bar">
+				<span>eBay Sportscardcollector's Search</span>
+				<a class="navlinks" href"">Back</a>
+			</nav>
+			<div class="container">
+				<form class="search-form">
+					<input type="text" placeholder="type player name here" required>
+					<input type="submit" value="Search">
+					<input type="reset" value="New Search">
+				</form>
+				<ul class="search-results"></ul>
+			</div>
+		</div>
+	</main>
+	<script src="assets/js/application.js"></script>
+</body>
+
+</html>
