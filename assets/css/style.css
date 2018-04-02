@@ -1,13 +1,10 @@
  * {
    box-sizing: border-box;
  }
-
  .body {
    font-size: 100%;
    font-family: Arial, Helvetica, Verdana, Geneva;
-   
  }
-
 .column {
   width: 33.3%;
   display: inline-block;
@@ -16,27 +13,19 @@
   font-size: 1.5rem;
   vertical-align: top;
 }
-
 .column img {
   width: 100%;
 }
-
 .container {
-  width: 960px;
-  margin: auto;
+  /*width: 960px;
+  margin: auto;*/
 }
-
 .header {
   text-align: center;
 }
-
 .header h1 {
-    letter-spacing: .3rem;
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px #000000;
+  font-size: 2rem;  
 }
-
-
 h5 {
   background: #FFD700;
   font-size: 1.8rem;
@@ -63,89 +52,81 @@ h5 {
   background-color: #FFD700;
 }
 .search-page {
-    display: none;
+  display: none;
+  width: 100%;
 }
-
 .search-page .nav { 
   text-align: center;
   background: #FFD700;
   padding: 20px;
   margin-bottom: 20px;
-  width: 960px;
-  margin: auto;
-  text-shadow: 2px 2px 4px #000000;
   font-size: 1.5rem;
+  width: 100%;
+  display: inline-block;
 }
-
 .search-page .nav span {
- 
   letter-spacing: .6rem;
   cursor: pointer;
-  
-
+}
+.search-page .nav i {
+  visibility: hidden;
 }
 .search-page .nav a {
   float:right;
 }
-
-
-
+.search-form {
+  width: 100%;
+}
 .search-form input {
   border: 1px solid #444444;
-  padding: 10px;
   margin-right: -4px;
+  height: 50px;
+  font-size: 16px;
 }
 .search-form input[type='text'] {
   width: 60%;
 }
-
 .search-form input[type='submit'] {
   width: 20%;
 }
 .search-form input[type='submit']:hover {
   background-color: #FFD700;
-  
 }
 .search-form input[type='reset'] {
   width: 20%;
 }
 .search-form input[type='reset']:hover {
   background-color: #FFD700;
-  
 }
 .search-results {
   padding-left: 0;
   list-style-type: none;
 }
-
 .search-results li {
   border-bottom: 1px dashed black;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-
 .search-results li .card-content {
   width: 300px;
   display: inline-block;
   vertical-align: top;
   margin-left: 50px;
 }
-
 .search-results li .card-content .card-title { 
   margin-top: 0;
+  color: black;
+  text-decoration-color: black;
 }
-
 .search-results li img {
-  width: 300px;
+  width: 200px;
   display: inline-block;
 }
-
 .intro-section {
-    border: 3px solid black;
-    padding: 10px;
-    border-radius: 25px; 
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 25px; 
 }
-
 .alist {
   list-style-type: disc;
   padding: 30px;
@@ -153,15 +134,10 @@ h5 {
   font: lucida;
   border: 1px  solid black;
   padding-bottom: 5px;
-
 }
-
 .alist li {
   border-bottom: none;
 }
-
-
-
 .quote {
   border: 2px solid black;
   padding: 10px;
@@ -175,4 +151,225 @@ h5 {
 }
 .footer {
   text-align: center;
+}
+.back-button {
+  display: none;
+}
+@media only screen and (max-width: 1280px) {
+  .search-page {
+    display: none;
+    width: 100%;
+  }
+  .search-page .nav i {
+    visibility: hidden;
+  }
+  .search-form {
+    width: 100%;
+  }
+  .search-results {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .search-results li {
+    border-bottom: 1px dashed black;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .back-button {
+    display: none;
+}
+  .close-icon {
+    display: none;
+}
+}
+@media only screen and (max-width: 1024px) {
+  
+  .search-form input {
+    border: 1px solid #444444;
+    padding: 10px;
+    margin-right: -4px;
+    width: 100%;
+}
+  .back-button {
+    display: none;
+  }
+}
+  .close-icon {
+    display: none;
+  }
+@media only screen and (max-width: 750px) {
+  .search-page .nav i {
+    visibility: visible;
+    float: left;
+    color: black;
+    font-size: 64px;
+  }
+  .header h1 {
+    font-size: 1.5;
+  }
+  .search-page .nav a {
+    display: none;
+  }
+ .close-icon {
+   position: relative;
+   padding: 10px;
+ }
+ .search-form input[type='text'] {
+  width: 91%;
+ }
+ .search-form input[type='submit'] {
+  width: 91%;
+}
+ .search-form input[type='reset'] {
+  display: none;
+}
+.search-form input[type='reset']:hover {
+  background-color: #FFD700;
+  display: none;
+}
+.search-form input {
+  border: 1px solid #444444;
+  padding: 10px;
+  margin-right: -4px;
+  width: 100%;
+  outline: 0;
+}
+.search-box:focus {
+	box-shadow: 0 0 15px 5px #b0e0ee;
+	border: 2px solid #bebede;
+}
+.close-icon {
+	border:1px solid transparent;
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+}
+.close-icon:after {
+	content: "X";
+	display: block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	background-color: black;
+	z-index:1;
+	right: 35px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 2px;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px black;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 447px) {
+  .search-form {
+    width: 100%;
+  }
+ .search-form input {
+   border: 1px solid #444444;
+   padding: 10px;
+   width: 91%;
+   outline: 0;
+ }
+ .search-form input[type='text'] {
+   width: 91%;
+ }
+ .search-form input[type='submit'] {
+   width: 91%;
+   /*padding: 10px;*/
+ }
+ .search-form input[type='submit']:hover {
+   background-color: #FFD700;
+ }
+ .search-form input[type='reset'] {
+  display: none;
+}
+.search-form input[type='reset']:hover {
+  background-color: #FFD700;
+  display: none;
+}
+.search-page .nav { 
+  background: #FFD700;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 1.5em;
+}
+.search-page .nav a {
+  display: none;
+}
+.search-results {
+  padding-left: 0;
+  list-style-type: none;
+}
+.search-results li {
+  border-bottom: 1px dashed black;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.search-results li .card-content {
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 25px;
+}
+.search-results li .card-content .card-title { 
+margin-top: 0;
+font-size: 1.5em;
+color: black;
+}
+.search-results li img {
+width: 100px;
+display: inline-block;
+}
+.intro-section {
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 25px; 
+}
+.alist {
+list-style-type: disc;
+padding: 30px;
+font-size: 140%;
+font: lucida;
+border: 1px  solid black;
+padding-bottom: 5px;
+}
+.alist li {
+border-bottom: none;
+}
+.quote {
+border: 2px solid black;
+padding: 10px;
+display: inline-block;
+width: 100%;
+margin: auto;
+font-size: 2vw;
+}
+.quote p {
+background: #FFD700;
+}
+.footer {
+text-align: center;
+}
+.header h1 {
+  font-size: 2em;
+}
+}
+@media only screen and (max-width: 350px) {
+.search-page .nav {
+  font-size: 1.25em;
+}
+.header h1 {
+  font-size: 2em;  
+}
+
+
 }

@@ -77,6 +77,12 @@ $('.search-form input[type=reset]').click(function(event) {
   $('.search-results').empty();
   $('.search-form input[type=text]').val("");
 });
+$('.close-icon').click(function(event) {
+  event.preventDefault();
+  $('.search-results').empty();
+  $('.search-form input[type=text]').val("");
+});
+
 function init() {
   $('.start-search').click(function() {
     $('.intro-section').hide();
@@ -84,6 +90,14 @@ function init() {
     $('.search-form').submit(formSubmit);
   });
   $('.navlinks').click(function() {
+    $('.search-page').hide();
+    $('.intro-section').show();
+  });
+  $('.back-button').click(function() {
+    $('.search-page').hide();
+    $('.intro-section').show();
+  });
+  $('i').click(function() {
     $('.search-page').hide();
     $('.intro-section').show();
   });
