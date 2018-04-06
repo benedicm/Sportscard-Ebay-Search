@@ -7,18 +7,13 @@
  }
  .intro-section {
   border: 3px solid black;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 25px; 
   width: 100%;
  }
 #namath, #nagurski, #payton {
   display: none;
-
 }
-/* .row {
-  display:none;
-
-} */
 .header {
   text-align: center;
 }
@@ -29,23 +24,28 @@ h5 {
   background: #FFD700;
   font-size: 1.8rem;
 }
+.footer {
+  display: none;
+}
 .start-search {
   display: block;
   margin: auto;
-  background-color: white;
+  background-color: #FFD700;
   padding: 15px;
-  border: 3px solid black;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
   color: #000000;
-  font-size: 3vw;
+  font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   cursor: pointer; 
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 100%;
   -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
+  letter-spacing: 2px;
 }
 .start-search:hover {
   background-color: #FFD700;
@@ -142,7 +142,7 @@ a {
 }
 .intro-section {
   border: 3px solid black;
-  padding: 10px;
+  padding: 0 0 0 0;
   border-radius: 25px; 
 }
 .alist {
@@ -193,7 +193,14 @@ a {
   }
 }
 @media only screen and (min-width: 750px) {
-#payton, #nagurski, #namath {
+
+.search-page .nav .fa-angle-left::before {
+    display: none;
+}
+.footer {
+  display: inline block;
+}
+  #payton, #nagurski, #namath {
   display: inline-block;
 }
   .column {
@@ -210,7 +217,6 @@ a {
   .header h1 {
     font-size: 1.5;
   }
-  
 .search-page .nav .navlinks {
   display: block;
   float:right;
@@ -299,6 +305,11 @@ text-align: center;
  .search-form input[type='reset']:hover {
  background-color: #FFD700;
  } */
+ .start-search {
+  width: 50%;
+  border: 3px solid black;
+  border-radius: 25px;
+ }
 }
 @media only screen and (min-width: 1024px) {
   .search-form input {
@@ -329,7 +340,6 @@ text-align: center;
     display: none;
     width: 100%;
   }
-
 .search-form .close-icon {
   display: none;
 }
