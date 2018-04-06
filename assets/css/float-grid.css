@@ -5,8 +5,8 @@
 
 .row {
   max-width: 1000px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
   margin: 0 auto;
 }
 
@@ -23,10 +23,12 @@
 
 .col-3, .col-4, .col-6, .col-12 {
   float: left;
-
-
-
-
+}
+@media only screen and (min-width: 300px) {
+.row {
+    width: 100%;
+  }
+}
   /* Gutters:
    * Each column padded by half gutter on each side,
    *
