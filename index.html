@@ -14,20 +14,20 @@
 <body>
 	<main role="main">
 		<section role="start page" class="intro-section">
-			<div class="header">
+			<div class="header"> <role="header"></role>
 				<h1>eBay Sports Card Search</h1>
 				<h5>Discover the real-time market value of your favorite sports trading cards!</h5>
 			</div>
 			<div class="row">
 				<div class="column">
-					<img alt="paytonrecord" src="assets/images/paytonrecord.jpg">
-					<img alt="payton" src="assets/images/paytonrookie.jpg">
+					<img alt="paytonrecord" id="payton" src="assets/images/paytonrecord.jpg">
+					<img alt="payton" id="paytonimg" src="assets/images/paytonrookie.jpg">
 				</div>
-				<div class="column">
+				<div class="column" id="nagurski">
 					<img alt="nagurski" src="assets/images/nagurski.jpg">
 					<img alt="namathrecord" src="assets/images/namathrecord.jpg">
 				</div>
-				<div class="column">
+				<div class="column" id="namath">
 					<img alt="namath" src="assets/images/joenamath.jpg">
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 			<button class="start-search">Go to Search</button>
 		</section>
 		<div class="search-page">
-			<nav class="nav" role="navigation bar">
+			<nav class="nav" role="navigation">
 				<a class="fa fa-angle-left"></a>
 				<span>eBay Card Search</span>
 				<a class="navlinks" href"">Back</a>
@@ -54,6 +54,7 @@
 		</div>
 	</main>
 	<script src="assets/js/application.js"></script>
+	<footer role="contentinfo">© 2018 Mark Benedict</footer>
 </body>
 
 </html>

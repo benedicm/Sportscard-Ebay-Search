@@ -56,6 +56,7 @@ function findCompletedItems(root) {
 function formSubmit(event) {
   event.preventDefault();
   var term = $(this).find('input').val();
+  $('.search-form input[type=text]').val("");
 
   const filter = {
     securityAppName: 'MarkBene-CardColl-PRD-b5d8a3c47-2072216b',
@@ -77,7 +78,7 @@ $('.search-form input[type=reset]').click(function(event) {
   $('.search-results').empty();
   $('.search-form input[type=text]').val("");
 });
-$('.close-form').click(function(event) {
+$('.close-icon').click(function(event) {
   event.preventDefault();
   $('.search-form input[type=text]').val("");
 });
