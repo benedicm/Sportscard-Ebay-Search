@@ -56,7 +56,7 @@ function findCompletedItems(root) {
 function formSubmit(event) {
   event.preventDefault();
   var term = $(this).find('input').val();
-  $('.search-form input[type=text]').val("");
+  $('form input[type=text]').val("");
   $('.search-results').empty();
 
   const filter = {
@@ -74,37 +74,37 @@ function formSubmit(event) {
   document.body.appendChild(s);
 }
 
-$('.search-form input[type=reset]').click(function(event) {
+$('form input[type=reset]').click(function(event) {
   event.preventDefault();
   $('.search-results').empty();
-  $('.search-form input[type=text]').val("");
+  $('form input[type=text]').val("");
 });
 $('.close-icon').click(function(event) {
   event.preventDefault();
-  $('.search-form input[type=text]').val("");
+  $('form input[type=text]').val("");
 });
 $('.close-icon').click(function(event) {
   event.preventDefault();
   $('.search-results').empty();
-  $('.search-form input[type=text]').val("");
+  $('form input[type=text]').val("");
 });
 function init() {
   $('.start-search').click(function() {
-    $('.intro-section').hide();
+    $('.intro-page').hide();
     $('.search-page').show();
-    $('.search-form').submit(formSubmit);
+    $('form').submit(formSubmit);
   });
   $('.navlinks').click(function() {
     $('.search-page').hide();
-    $('.intro-section').show();
+    $('.intro-page').show();
   });
   $('.back-button').click(function() {
     $('.search-page').hide();
-    $('.intro-section').show();
+    $('.intro-page').show();
   });
   $('.fa-angle-left').click(function() {
     $('.search-page').hide();
-    $('.intro-section').show();
+    $('.intro-page').show();
   });
 }
 
