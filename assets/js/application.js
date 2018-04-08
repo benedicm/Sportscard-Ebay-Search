@@ -1,3 +1,9 @@
+window.onload = function() {
+  var alert = document.getElementById('error');
+  alert.setAttribute('aria-hidden', true);
+};   
+
+
 function normalizeDate(oldDate) {
   const date = new Date(oldDate);
   const year = date.getFullYear();
@@ -54,12 +60,32 @@ function findCompletedItems(root) {
 }
 
 function formSubmit(event) {
+  
+  if ($(this).find('input').val() == '') {
+    event.preventDefault();
+    document.getElementById("error").style.display = "block";
+    var alert = document.getElementById('error');
+    var input = document.getElementById('searchbarmain');
+    alert.innerHTML = "";
+    var span = document.createElement('span');
+    span.innerHTML = "You need to enter a search term before pressing search";
+    document.getElementById("closeicon").style.display = "none";
+    alert.appendChild(span);
+    input.setAttribute('aria-invalid', true);
+    input.focus();
+  }
+  else {
   event.preventDefault();
+  document.getElementById("error").style.display = "none";
+  document.getElementById("closeicon").style.display = "inline";
   var term = $(this).find('input').val();
   $('.search-results').empty();
   // $('form input[type=text]').val("");
+  // if(term === "") {
+    
+    
   
-
+  
   const filter = {
     securityAppName: 'MarkBene-CardColl-PRD-b5d8a3c47-2072216b',
     findBy: 'findCompletedItems',
@@ -74,6 +100,8 @@ function formSubmit(event) {
   s.src = url;
   document.body.appendChild(s);
 }
+}
+  
 
 $('form input[type=reset]').click(function(event) {
   event.preventDefault();

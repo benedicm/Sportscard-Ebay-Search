@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta content="width=device-width" name="viewport">
+	<meta content="width=device-width, initial scale=1" name="viewport">
 	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 	<link href="assets/css/float-grid.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/style.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@
 		<div class="intro-page">
 			<header role="banner">
 				<h1>eBay Sports Card Search</h1>
-				<h5>This app displays Ebay's final sale price for popular sports cards.</h5>
+				<h2>This app displays Ebay's final sale price for popular sports cards.</h5>
 			<header>
 			<section role="region">
 				<div class="row">
@@ -31,9 +31,9 @@
 						<img alt="namath" src="assets/images/joenamath.jpg">
 					</div>
 				</div>
-				<Div class="footer">
-					<h5>Discover the real-time market value of your favorite sports trading cards!</h5>
-				</Div>
+				<div class="footer">
+					<h2>Discover the real-time market value of your favorite sports trading cards!</h5>
+				</div>
 				<button class="start-search">Start Search</button>
 			</section>
 		</div>
@@ -45,8 +45,11 @@
 				</nav>
 				<div class="container">
 					<form role="form">
-						<input type="text" name="focus" placeholder="type player name here" required>
-							<button class="close-icon" type="reset">X</button>
+						<label class="search-label" for="search">Search a player's card
+							<p id="error" role="alert" style="display: none"></p>
+						</label>
+						<input type="text" name="focus" id="searchbarmain" placeholder="type player name here">
+							<button class="close-icon" id="closeicon" type="reset">X</button>
 						<input type="submit" value="Search">
 						<input type="reset" value="New Search">
 					</form>
