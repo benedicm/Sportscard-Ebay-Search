@@ -56,8 +56,9 @@ function findCompletedItems(root) {
 function formSubmit(event) {
   event.preventDefault();
   var term = $(this).find('input').val();
-  $('form input[type=text]').val("");
   $('.search-results').empty();
+  $('form input[type=text]').val("");
+  
 
   const filter = {
     securityAppName: 'MarkBene-CardColl-PRD-b5d8a3c47-2072216b',
