@@ -57,7 +57,7 @@ function formSubmit(event) {
   event.preventDefault();
   var term = $(this).find('input').val();
   $('.search-results').empty();
-  $('form input[type=text]').val("");
+  // $('form input[type=text]').val("");
   
 
   const filter = {
