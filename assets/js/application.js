@@ -80,7 +80,7 @@ function formSubmit(event) {
   document.getElementById("closeicon").style.display = "inline";
   var term = $(this).find('input').val();
   $('.search-results').empty();
-  // $('form input[type=text]').val("");
+  // $('form input[type=search]').val("");
   // if(term === "") {
     
     
@@ -106,16 +106,16 @@ function formSubmit(event) {
 $('form input[type=reset]').click(function(event) {
   event.preventDefault();
   $('.search-results').empty();
-  $('form input[type=text]').val("");
+  $('form input[type=search]').val("");
 });
 $('.close-icon').click(function(event) {
   event.preventDefault();
-  $('form input[type=text]').val("");
+  $('form input[type=search]').val("");
 });
 $('.close-icon').click(function(event) {
   event.preventDefault();
   $('.search-results').empty();
-  $('form input[type=text]').val("");
+  $('form input[type=search]').val("");
 });
 function init() {
   $('.start-search').click(function() {

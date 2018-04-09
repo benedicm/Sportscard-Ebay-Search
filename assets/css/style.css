@@ -78,10 +78,16 @@ form .close-icon {
  cursor: pointer;
  font-size: 16px;
  padding: 0;
+ z-index: 1;
 }
+#searchbarmain {
+  position: relative;
+  
+}
+
 form {
   width: 100%;
-  position: relative;
+  
 }
 form input {
  border: 2px solid grey;
@@ -91,22 +97,20 @@ form input {
  outline: 0;
  text-indent: 15px;
  margin-left:-4px;
- position: relative;
  font-size: 16px;
  border-radius: 5px;
-
 }
-
-form input[type='text'] {
+form input[type='search'] {
+  position: relative;
   width: 100%;
 }
 form input[type='submit'] {
   width: 100%;
-  &:focus,
-  &:hover {
+  &::focus,
+  &::hover {
   outline: 0;
   border-color: darken(#ffd700, 10%);
-  background-color: darken(#0170bc, 5%);
+  background-color: darken(#ffd700, 5%);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.63);
   }
 }
@@ -227,10 +231,13 @@ a {
 }
 }
 @media only screen and (min-width: 750px) {
-  form .close-icon {
+  
+  
+  
+  input .close-icon {
     position: absolute;
     top: 40px;
-    right: 325px;
+    right: 475px;
     font-weight: bold;
     background-color: #ffD700;
     display: inline;
@@ -330,12 +337,12 @@ form {
 }
 form input {
  border: 1px solid #444444;
- padding: 10px;
+ padding: 10px;e
  width: 100%;
  outline: 0;
  text-indent: 15px;
 }
-form input[type='text'] {
+form input[type='search'] {
   width: 70%;
   position: relative;
  }
@@ -350,13 +357,13 @@ form input[type='text'] {
  }
 }
 @media only screen and (min-width: 1024px) {
-  background-color: #FFD700;
- }{
+  
   form input {
     border: 1px solid #444444;
     padding: 10px;
     /* margin-right: -4px; */
     width: 100%;
+    position: relative;
 }
   .back-button {
     display: none;
