@@ -1,5 +1,5 @@
 window.onload = function() {
-  var alert = document.getElementById('error');
+  var alert = $('#error')[0];
   alert.setAttribute('aria-hidden', true);
 };   
 
@@ -63,29 +63,23 @@ function formSubmit(event) {
   
   if ($(this).find('input').val() == '') {
     event.preventDefault();
-    document.getElementById("error").style.display = "block";
-    var alert = document.getElementById('error');
-    var input = document.getElementById('searchbarmain');
-    alert.innerHTML = "";
-    var span = document.createElement('span');
-    span.innerHTML = "You need to enter a search term before pressing search";
-    document.getElementById("closeicon").style.display = "none";
-    alert.appendChild(span);
-    input.setAttribute('aria-invalid', true);
+    $('#error').css("display","block");
+    var alert = $('#error');
+    var input = $('#searchbarmain');
+    alert.empty();
+    var span = $('<span>');
+    span.text('You need to enter a search term before pressing search');
+    alert.append(span);
+    input.attr('aria-invalid', 'true');
     input.focus();
   }
   else {
   event.preventDefault();
-  document.getElementById("error").style.display = "none";
-  document.getElementById("closeicon").style.display = "inline";
+  $("#error").css("display", "none");
   var term = $(this).find('input').val();
   $('.search-results').empty();
-  // $('form input[type=search]').val("");
-  // if(term === "") {
-    
-    
   
-  
+    
   const filter = {
     securityAppName: 'MarkBene-CardColl-PRD-b5d8a3c47-2072216b',
     findBy: 'findCompletedItems',
@@ -108,15 +102,7 @@ $('form input[type=reset]').click(function(event) {
   $('.search-results').empty();
   $('form input[type=search]').val("");
 });
-$('.close-icon').click(function(event) {
-  event.preventDefault();
-  $('form input[type=search]').val("");
-});
-$('.close-icon').click(function(event) {
-  event.preventDefault();
-  $('.search-results').empty();
-  $('form input[type=search]').val("");
-});
+
 function init() {
   $('.start-search').click(function() {
     $('.intro-page').hide();
